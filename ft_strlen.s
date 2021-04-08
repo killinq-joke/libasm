@@ -1,0 +1,3 @@
+segment .bss
+
+segment .data
