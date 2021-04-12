@@ -6,11 +6,11 @@
 #    By: ztouzri <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 15:24:10 by ztouzri           #+#    #+#              #
-#    Updated: 2021/04/12 15:29:22 by ztouzri          ###   ########.fr        #
+#    Updated: 2021/04/12 18:14:12 by ztouzri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= ft_strlen.s ft_strcpy.s ft_strcmp.s
+SRCS	= ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s
 OBJS	= $(SRCS:.s=.o)
 CC		= gcc
 LIB		= libasm.a
