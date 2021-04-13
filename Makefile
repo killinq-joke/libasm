@@ -6,11 +6,11 @@
 #    By: ztouzri <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/12 15:24:10 by ztouzri           #+#    #+#              #
-#    Updated: 2021/04/12 18:14:12 by ztouzri          ###   ########.fr        #
+#    Updated: 2021/04/13 10:37:22 by ztouzri          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s
+SRCS	= ft_strlen.s ft_strcpy.s ft_strcmp.s ft_write.s ft_read.s ft_strdup.s
 OBJS	= $(SRCS:.s=.o)
 CC		= gcc
 LIB		= libasm.a
@@ -24,8 +24,11 @@ $(LIB):	$(OBJS)
 	
 all: 	$(LIB)
 
+#usage of test:
+# make test ARGS=20 >> test with BF_SIZE = 20
+# make test ARGS=3 >> test with BF_SIZE = 3
 test:	$(LIB)
-	$(CC) $(CFLAGS) main.c $(LIB) -o $(EXEC) && ./$(EXEC)
+	$(CC) $(CFLAGS) main.c $(LIB) -o $(EXEC) -D BF_SIZE=$(ARGS) && ./$(EXEC)
 
 clean:
 	$(RM) $(OBJS) $(EXEC) a.out
