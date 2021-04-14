@@ -6,7 +6,7 @@
 /*   By: ztouzri <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:24:04 by ztouzri           #+#    #+#             */
-/*   Updated: 2021/04/13 11:10:35 by ztouzri          ###   ########.fr       */
+/*   Updated: 2021/04/13 14:55:54 by ztouzri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int main()
 	ft_write(1, "write 14 characteres\n", 21);
 	ft_read(fd, s1, BF_SIZE);
 	ft_write(1, s1, ft_strlen(s1) - 1);
-	char	*dup = ft_strdup(s2);
+	char	*dup = ft_strdup(s1);
 	printf("dup == %s\n", dup);
 	return (0);
 }
